@@ -74,10 +74,10 @@ trait Hex
      * Encoding string or integer or numeric string(is not zero prefixed) or big number to hex.
      *
      * @param string|int|BigNumber $value
-     * @param bool $isPrefix
+     * @param bool $isPrefix (default: true)
      * @return string
      */
-    public static function toHex(string|int|BigNumber $value, bool $isPrefix = false): string
+    public static function toHex(string|int|BigNumber $value, bool $isPrefix = true): string
     {
         if (is_numeric($value)) {
             // turn to hex number
